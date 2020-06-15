@@ -1,0 +1,157 @@
+body{font-family: "Open Sans", sans-serif;}
+.auth-container{
+  background: #d2d2d2;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  .logos {
+    border: 1px solid cornflowerblue;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    margin-bottom: 570px;
+    background-image: url("../../assets/image/avatar/93614384_2967259800008078_8082661519407448064_n.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .logo:hover{
+    border: 1px solid #f14000;
+    cursor: pointer;
+  }
+  .auth-form{
+    background: #eaeaea;
+    height: 670px;
+    width: 570px;
+    padding: 80px;
+    box-shadow: 8px 8px 6px -6px black;
+    border-radius: 25px;
+    .title{
+      margin-top: 30px;
+      color: black;
+      font-family: "Nunito", sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+    }
+    form{
+      padding-top: 20px;
+      transition: 0.5s;
+      mat-form-field{
+        width: 87%;
+        height: 50px;
+        margin: 10px;
+        input{
+          width: 95%;
+          height: 50px;
+          background: transparent;
+          border: 1px solid black;
+          border-radius: 15px;
+          color: #262628;
+          font-size: 20px;
+          font-weight: 200;
+          padding-left: 10px;
+        }
+        .error{
+          padding-left: 5px;
+        }
+
+      }
+      ::placeholder {
+        font-weight: 400;
+        color: #565656;
+        opacity: 1;
+      }
+      .dir{
+        margin-top: 30px;
+        width: 100%;
+        color: #222222;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        padding-right: 10px;
+        cursor: pointer;
+      }
+      .dir:hover{
+        color: #00b4af;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .mat-button{
+        font-weight: 300;
+        cursor: pointer;
+        background: #00b4af;
+        width: 95%;
+        height: 50px;
+        border: #00b4af;
+        border-radius: 30px;
+        color: #3b3b3b;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-top: 15px;
+
+      }
+      .btn-1 {
+        background: #00b4af;
+        color: white;
+        transition: all 0.5s ease-out;
+      }
+      .btn-1:hover {
+        position: relative;
+        top: -3px;
+        background: #10CE88;
+        color: white;
+      }
+    }
+    .hr{
+      position: absolute;
+      margin-top: 500px;
+      mat-divider{
+        display: flex;
+        margin-top: 15px;
+        height: 0.9px;
+        width: 150px;
+      }
+      .hr-right{
+        background: linear-gradient(to right, black,  #eaeaea);
+      }
+      .hr-left{
+        background: linear-gradient(to left, black,  #eaeaea);
+      }
+      span{
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-top: 7px;
+        font-weight: 200;
+      }
+      .social{
+        margin-top: 20px;
+        fa-icon{
+          font-size: 19px;
+        }
+        .facebook{
+          color: #3b5998;
+        }
+        .facebook:hover{
+          color: #436eb5;
+          cursor: pointer;
+        }
+        .google{
+          color: #0F9D58;
+          margin-left: 10px;
+        }
+        .google:hover{
+          cursor: pointer;
+          color: #0fb369;
+        }
+      }
+    }
+
+  }
+
+  @media (max-width: 575px) {
+    .auth-form {
+     width:  95%;
+      height: 100%;
+
+    }
+  }
+}

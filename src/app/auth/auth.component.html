@@ -1,0 +1,97 @@
+<div fxLayout="column" class="auth-container">
+  <div fxLayout="column"  fxFlexFill fxLayoutAlign="center center">
+    <div class="logos" (click)="nav()">
+
+    </div>
+    <div class="auth-form" fxLayoutAlign="center center"  fxLayout="row" fxFlex.lt-md="80">
+      <mat-tab-group *ngIf="!needHelp && !forgot">
+        <mat-tab label="Sign In">
+          <span class="title" fxLayoutAlign="center start">Sign In</span>
+         <form [formGroup]="loginForm" fxLayout="column" fxLayoutAlign="center center">
+              <mat-form-field appearance="none" >
+                <input matInput placeholder="email" formControlName="email" autocomplete="off">
+                <mat-error class="error" *ngIf="loginForm.get('email').hasError('required')">Email Required</mat-error>
+                <mat-error class="error" *ngIf="loginForm.get('email').hasError('pattern')">Email Invalid</mat-error>
+              </mat-form-field>
+           <mat-form-field appearance="none" style="margin-top: 25px">
+             <input matInput type="password" placeholder="Password" formControlName="password">
+             <mat-error class="error" *ngIf="loginForm.get('password').hasError('required')">Password Required</mat-error>
+           </mat-form-field>
+            <div  fxFlexFill>
+             <span class="dir" fxLayoutAlign="end center" (click)="forgotPassword('fp')">
+               Forgot Password?
+              </span>
+            </div>
+           <button class="mat-button btn-1"> Sign In</button>
+         </form>
+        </mat-tab>
+        <mat-tab label="Sign Up">
+          <span class="title" fxLayoutAlign="center start">Sign Up</span>
+          <form [formGroup]="signUpForm" fxLayout="column" fxLayoutAlign="center center">
+            <mat-form-field appearance="none">
+              <input matInput placeholder="email" formControlName="email">
+              <mat-error class="error" *ngIf="signUpForm.get('email').hasError('required')">Email Required</mat-error>
+              <mat-error class="error" *ngIf="signUpForm.get('email').hasError('pattern')">Email Required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="none" style="margin-top: 25px">
+              <input matInput type="password" placeholder="Password" formControlName="password">
+              <mat-error class="error" *ngIf="signUpForm.get('password').hasError('required')">Password Required</mat-error>
+            </mat-form-field>
+            <div  fxFlexFill>
+              <span class="dir" fxLayoutAlign="end center" (click)="forgotPassword('nh')">
+                Need Help?
+              </span>
+            </div>
+            <button class="mat-button btn-1"> Sign Up</button>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+      <mat-tab-group  *ngIf="forgot || needHelp">
+        <mat-tab label="Forgot Password">
+          <span class="title" fxLayoutAlign="center start">Forgot Password</span>
+          <form [formGroup]="forgotForm" fxLayout="column" fxLayoutAlign="center center">
+            <mat-form-field appearance="none">
+              <input matInput placeholder="email" formControlName="email">
+              <mat-error class="error" *ngIf="forgotForm.get('email').hasError('required')">Email Required</mat-error>
+              <mat-error class="error" *ngIf="forgotForm.get('email').hasError('pattern')">Email Invalid</mat-error>
+            </mat-form-field>
+            <div  fxFlexFill>
+             <span class="dir" fxLayoutAlign="end center" (click)="forgotPassword('si')">
+              Sign In
+              </span>
+            </div>
+            <button class="mat-button btn-1"> Request</button>
+          </form>
+        </mat-tab>
+        <mat-tab label="Help">
+          <span class="title" fxLayoutAlign="center start">Help Center</span>
+          <form [formGroup]="helpMeForm" fxLayout="column" fxLayoutAlign="center center">
+            <mat-form-field appearance="none">
+              <input matInput placeholder="Problem" formControlName="helpme">
+              <mat-error class="error" *ngIf="helpMeForm.get('helpme').hasError('required')">Problem Required</mat-error>
+            </mat-form-field>
+            <div  fxFlexFill>
+              <span class="dir" fxLayoutAlign="end center" (click)="forgotPassword('si')">
+                Sign In
+              </span>
+            </div>
+            <button class="mat-button btn-1"> Help</button>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    <div class="hr" fxLayout="column">
+      <div fxLayout="row">
+        <mat-divider class="hr-left"></mat-divider>
+        <span fxLayoutAlign="start start">OR</span>
+        <mat-divider class="hr-right"></mat-divider>
+      </div>
+      <div class="social" fxLayoutAlign="center center">
+
+        <fa-icon [icon]="facebook" class="facebook"></fa-icon>
+        <fa-icon [icon]="google" class="google"></fa-icon>
+        <fa-icon [icon]="home" class="google" (click)="nav()"></fa-icon>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

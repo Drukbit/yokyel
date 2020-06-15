@@ -1,0 +1,40 @@
+<div class="container" fxLayout="column" fxFlex="100" fxLayoutAlign="center center" fxFill>
+  <span fxLayout="start start" class="title-header">Additional Info </span>
+  <div class="container-wrapper" fxLayout="column" fxLayoutAlign="center center"  fxFlex="50">
+      <div class="profile" fxLayout="column" fxLayoutAlign="center center">
+        <div class="option" fxLayoutAlign="center center">
+         <span>UPLOAD </span>
+        </div>
+      </div>
+  </div>
+  <div class="form" fxLayout="column" fxLayoutAlign="center center"  fxFlex="90">
+   <div class="form-wrapper" fxLayout="column">
+     <div fxLayout.gt-xs="row" fxLayoutGap.gt-sm="20px">
+       <mat-form-field appearance="outline">
+         <input matInput placeholder="First Name">
+       </mat-form-field>
+       <mat-form-field appearance="outline">
+         <input matInput placeholder="Last Name">
+       </mat-form-field>
+     </div>
+     <mat-form-field appearance="outline" fxFlex="100">
+      <mat-select placeholder="Gender">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+      </mat-select>
+     </mat-form-field>
+     <mat-form-field appearance="outline" fxFlex="100">
+       <input matInput placeholder="Number">
+     </mat-form-field>
+     <mat-form-field appearance="outline" fxFlex="100">
+       <input matInput placeholder="Birthday" [matDatepicker]="picker">
+       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+       <mat-datepicker #picker></mat-datepicker>
+     </mat-form-field>
+     <mat-form-field appearance="outline" fxFlex="100">
+       <input matInput placeholder="Address">
+     </mat-form-field>
+     <button class="btn">Submit</button>
+   </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "auth": [
+    {
+      "email": "lodey30@gmail.com",
+      "password": "lodey123",
+      "id": 1
+    },
+    {
+      "email": "jigme.lodey@dcpl.bt",
+      "password": "lodeys",
+      "id": 2
+    },
+    {
+      "email": "td@dcpl.bt",
+      "password": "HeyHappyLodey",
+      "id": 3
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "email": "some comment",
+      "postId": 1
+    }
+  ]
+}

@@ -1,0 +1,488 @@
+<div class="container-wrapper" fxFlexFill fxLayout="column">
+  <div class="nav-bar" fxLayout="row" fxFlex="100">
+    <div class="container" fxLayout="column">
+      <div class="top-nav" fxLayout="row">
+        <div class="contact" fxFlex="50" fxLayoutAlign="center center">
+          <div class="nav-info" fxLayout="row wrap" fxLayoutAlign="end center">
+            <span class="email">
+              <fa-icon [icon]="mail"></fa-icon>
+            </span>
+            <span class="email" fxHide.xs>
+             drukbit@gmail.com
+            </span>
+          </div>
+          <div class="nav-info" fxLayout="row wrap">
+             <span class="phone">
+              <fa-icon [icon]="phone"></fa-icon>
+            </span>
+            <span class="number" fxHide.xs>
+             drukbit@gmail.com
+            </span>
+          </div>
+        </div>
+        <div class="social" fxFlex="30" fxLayoutAlign="end center">
+          <div fxLayout="row wrap" fxLayoutGap="10px">
+            <fa-icon [icon]="twit"></fa-icon>
+            <fa-icon [icon]="facebook"></fa-icon>
+            <fa-icon [icon]="watsapp"></fa-icon>
+            <fa-icon [icon]="insta"></fa-icon>
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="{ 'bottom-nav':!scroll, 'bottom-nav-after':scroll }">
+        <div class="logo" fxFlex="50" fxLayoutAlign="center center">
+          YokYel
+        </div>
+        <div class="nav-links" fxFlex="50" fxLayoutAlign="center center" fxHide.lt-md>
+          <ul fxLayout="row wrap" fxLayoutGap="35px">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#job">Job</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a routerLink="./auth">Login</a></li>
+          </ul>
+        </div>
+        <div  fxFlex.lt-sm="50"  fxFlex="30" fxHide.gt-md fxLayoutAlign="end center">
+          <button mat-button [matMenuTriggerFor]="menu"><fa-icon [icon]="menus"></fa-icon></button>
+          <mat-menu #menu="matMenu" class="my-class">
+
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-wrapper" fxFlexFill fxFlexAlign="center center">
+    <div class="hero-container" fxLayout="column" fxFlexFill fxFlexAlign="center center" fxFlex="22" fxHide.lt-sm></div>
+    <div class="hero-container" fxLayout="column" fxFlexFill fxFlexAlign="center center" fxFlex="78" fxLayoutGap="20px">
+      <div fxFlex="40" fxFlex.lt-md="20" fxLayout="row wrap" fxLayoutAlign="start end" fxLayout.lt-sm="center start">
+        <div fxLayout="column" fxFlex="100">
+        <span class="text">
+          We have 850,000 great job offers you deserve!
+        </span>
+        </div>
+      </div>
+      <div fxLayout="column" fxFlex="100"  fxLayoutAlign="start start" class="hero-title" fxHide.lt-md>
+        <span class="header"> Your Dream </span>
+        <span class="sub-header"> Job is Waiting </span>
+
+      </div>
+      <div fxFlex="40" fxLayout="row wrap" fxLayoutAlign.lt-md="center start" fxLayoutAlign.lt-sm="start start" fxLayoutAlign="start start">
+        <mat-tab-group fxFlex.gt-xs="60" >
+          <mat-tab label="Find Job">
+            <mat-card fxLayout="row wrap" fxLayout.lt-md="column wrap" fxLayoutGap="10px">
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="Job Title">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+               <mat-select placeholder="Category">
+                  <mat-option>Full Time</mat-option>
+                 <mat-option>Part Time</mat-option>
+                 <mat-option>Internship</mat-option>
+                 <mat-option>Freelance</mat-option>
+                 <mat-option>Temporary</mat-option>
+               </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="location">
+              </mat-form-field>
+              <button mat-button> Search</button>
+            </mat-card>
+          </mat-tab>
+          <mat-tab label="Find Candidate">
+            <mat-card fxLayout="row wrap" fxLayout.lt-md="column wrap" fxLayoutGap="10px">
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="Person Name">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-select placeholder="Category">
+                  <mat-option>Full Time</mat-option>
+                  <mat-option>Part Time</mat-option>
+                  <mat-option>Internship</mat-option>
+                  <mat-option>Freelance</mat-option>
+                  <mat-option>Temporary</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="Location">
+              </mat-form-field>
+              <button mat-button> Search</button>
+            </mat-card>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+  <div class="about-us" fxLayout="column" id="about" fxFlex="100" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutGap.lt-md="5px" fxLayoutGap="15px" fxFlex="100">
+      <div fxLayout="column" fxFlex="100" fxLayoutAlign="center center">
+        <span class="container-header">ABOUT</span>
+      </div>
+      <span class="container-subheader" fxFlex="100" fxLayoutAlign.lt-md="start center">
+          <h3>  Learn  More <span class="title">About Us</span></h3>
+        </span>
+    </div>
+    <div class="container-detail" fxFlex="100" fxLayout="row wrap">
+      Yekyel means Village of job.
+      Every work, we do these days is purely based on the digital system. With arising vying for
+      commercial and employment, the general idea of online jobs and accessing the availability
+      of jobs in the market via the digitalized system is the purpose of the Yokyel. This way,
+      the job seekers will be able to make their work easier in getting jobs and reduce their expenditure.
+      The organizations will be able to get their expected candidates and reduce their expenditure.
+    </div>
+    <button fxLayoutGap.gt-md="10" fxLayoutGap.lt-md="50">Read More</button>
+  </div>
+  <div class="services" fxLayout="column" id="service" fxFlex="100" fxLayoutAlign="center center">
+    <span class="container-header" fxLayoutAlign="center center">SERVICES</span>
+    <span class="container-subheader" fxFill fxFlex="100" fxLayoutAlign.lt-md="center center">
+          <h3>  We Provide Different <span class="title">Services</span></h3>
+        </span>
+    <div class="services-container" fxFlex="100" fxFill fxLayout.lt-sm="column" fxLayout="row wrap" fxFlexAlign.gt-sm="center center" fxLayoutGap.gt-sm="20px">
+      <div class="box" fxLayout="column" fxFlexAlign="center center" fxFlex.xs="40"  fxFlex.sm="40" fxFlex.gt-sm="20" >
+        <fa-icon [icon]="search"></fa-icon>
+        <span class="subheader gap">Search Million Job</span>
+       <div class="body">
+          Search millions of job that you prefer without any difficulty by going to individual offices.
+       </div>
+      </div>
+      <div class="box" fxLayout="column" fxFlexAlign="center center" fxFlex.xs="40" fxFlex.sm="40" fxFlex.gt-sm="20" >
+        <fa-icon [icon]="person"></fa-icon>
+        <span class="subheader gap"> Expert Candidates</span>
+        <div class="body">
+          Search expert candidates just sitting at office and opening our site. Easy to get their document.
+        </div>
+      </div>
+      <div class="box" fxLayout="column" fxFlexAlign="center center" fxFlex.xs="40" fxFlex.sm="40" fxFlex.gt-sm="20" >
+        <fa-icon [icon]="person"></fa-icon>
+        <span class="subheader gap"> Easy To Apply</span>
+        <div class="body">
+          Search expert candidates just sitting at office and opening our site. Easy to get their document.
+        </div>
+      </div>
+      <div class="box" fxLayout="column" fxFlexAlign="center center" fxFlex.xs="40" fxFlex.sm="40" fxFlex.gt-sm="20" >
+        <fa-icon [icon]="person"></fa-icon>
+        <span class="subheader gap"> Easy To Apply</span>
+        <div class="body">
+          Search expert candidates just sitting at office and opening our site. Easy to get their document.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-data" fxLayout="column" fxFlex="100" fxLayoutAlign="center center" fxHide.xs>
+    <div fxLayout="row" fxFlex="100" fxFill fxLayoutAlign="center center" fxLayoutGap="30px">
+      <div class="hero-box" fxLayout="column" fxLayoutAlign="center center">
+         <span class="hero-number">
+          12,000
+        </span>
+        <span class="hero-text">
+            Jobs
+        </span>
+      </div>
+      <div class="hero-box" fxLayout="column" fxLayoutAlign="center center">
+        <span class="hero-number">
+          12,000
+        </span>
+        <span class="hero-text">
+            Member
+        </span>
+      </div>
+      <div class="hero-box" fxLayout="column" fxLayoutAlign="center center">
+        <span class="hero-number">
+          12,000
+        </span>
+        <span class="hero-text">
+            Resume
+        </span>
+      </div>
+      <div class="hero-box" fxLayout="column" fxLayoutAlign="center center">
+        <span class="hero-number">
+          12,000
+        </span>
+        <span class="hero-text">
+            Company
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="job" id="job" fxLayout="column" fxFlex="100" fxFill fxLayoutAlign="center center">
+    <span class="container-header" fxLayoutAlign="center center">Jobs</span>
+    <span class="container-subheader" fxFill fxFlex="100" fxLayoutAlign.lt-md="center center">
+          <h3>  Recently Posted  <span class="title">Jobs</span></h3>
+    </span>
+   <div class="job-wrapper" fxLayout="row" fxLayout.lt-sm="column" fxFlexAlign.gt-sm="20" fxFlexAlign="center center" fxLayoutGap="20px">
+      <div fxLayout="column" fxFlex.gt-md="20" fxLayoutGap="20px">
+        <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <span fxFlex="70"> Waiter/Waitress</span>
+          <span class="number" fxFlexAlign="center center">100</span>
+        </div>
+        <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <span fxFlex="70">  Marketing & Sales</span>
+          <span class="number" fxFlexAlign="center center">2010</span>
+        </div>
+        <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <span fxFlex="70">Web Development</span>
+          <span class="number" fxFlexAlign="center center">1090</span>
+        </div>
+        <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <span fxFlex="70">Writing </span>
+          <span class="number" fxFlexAlign="center center">1900</span>
+        </div>
+      </div>
+     <div fxLayout="column" fxFlex.gt-md="20" fxLayoutGap="20px">
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">  Chief Technology Officer</span>
+         <span class="number" fxFlexAlign="center center">500</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70"> Pipefitter</span>
+         <span class="number" fxFlexAlign="center center">1000</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">Librarian</span>
+         <span class="number" fxFlexAlign="center center">4</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px"  fxHide.xs>
+         <span fxFlex="70"> IT Manager</span>
+         <span class="number" fxFlexAlign="center center">15</span>
+       </div>
+     </div>
+     <div fxLayout="column" fxFlex.md="100" fxFlex.gt-md="20" fxLayoutGap="20px" fxHide.xs>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <span fxFlex="70">Wet Cleaner</span>
+         <span class="number" fxFlexAlign="center center">10</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70"> Office Clerk</span>
+         <span class="number" fxFlexAlign="center center">20</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">Marketing Specialist</span>
+         <span class="number" fxFlexAlign="center center">1500</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">  Teacher</span>
+         <span class="number" fxFlexAlign="center center">1200</span>
+       </div>
+     </div>
+     <div fxLayout="column" fxFlex.gt-md="20" fxLayoutGap="20px" fxHide.lt-md>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">Electrician</span>
+         <span class="number" fxFlexAlign="center center">100</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">Driver</span>
+         <span class="number" fxFlexAlign="center center">98</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">HR</span>
+         <span class="number" fxFlexAlign="center center">5</span>
+       </div>
+       <div class="job-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+         <span fxFlex="70">CEO</span>
+         <span class="number" fxFlexAlign="center center" >15</span>
+       </div>
+     </div>
+   </div>
+  </div>
+  <div class="clients" fxLayoutAlign="center center" fxLayout="column" fxHide.xs>
+    <span class="container-header" fxLayoutAlign="center center">Clients</span>
+    <span class="container-subheader" fxFill fxFlex="100" fxLayoutAlign.lt-md="center center">
+          <h3>  Our Top  <span class="title">Clients</span></h3>
+    </span>
+    <div class="client-wrapper">
+      <swiper class="swiper-container" fxFlex="auto" [config]="config"  (indexChange)="onIndexChange($event)">
+        <div *ngFor="let slide of slides" class="swiper-slide">
+          <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+            <div *ngIf="selected === 0" fxLayout="column"  fxLayoutAlign="center center">
+              <div class="image" fxLayoutAlign="center center">
+                hey
+              </div>
+              <div class="quote" fxLayoutAlign="center center">
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+              </div>
+              <div class="name">
+                Jigme Lodey
+                <div class="job-title">
+                  Drukbit
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selected === 1" fxLayout="column"  fxLayoutAlign="center center">
+              <div class="image" fxLayoutAlign="center center">
+                hey
+              </div>
+              <div class="quote" fxLayoutAlign="center center">
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+              </div>
+              <div class="name">
+                Jigme Lodey
+                <div class="job-title">
+                  Drukbit
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selected === 2" fxLayout="column"  fxLayoutAlign="center center">
+              <div class="image" fxLayoutAlign="center center">
+                hey
+              </div>
+              <div class="quote" fxLayoutAlign="center center">
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+              </div>
+              <div class="name">
+                Jigme Lodey
+                <div class="job-title">
+                  Drukbit
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selected === 3" fxLayout="column"  fxLayoutAlign="center center">
+              <div class="image" fxLayoutAlign="center center">
+                hey
+              </div>
+              <div class="quote" fxLayoutAlign="center center">
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+              </div>
+              <div class="name">
+                Jigme Lodey
+                <div class="job-title">
+                  Drukbit
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selected === 4" fxLayout="column"  fxLayoutAlign="center center">
+              <div class="image" fxLayoutAlign="center center">
+                hey
+              </div>
+              <div class="quote" fxLayoutAlign="center center">
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+              </div>
+              <div class="name">
+                Jigme Lodey
+                <div class="job-title">
+                  Drukbit
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selected === 5" fxLayout="column"  fxLayoutAlign="center center">
+              <div class="image" fxLayoutAlign="center center">
+                hey
+              </div>
+              <div class="quote" fxLayoutAlign="center center">
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+                A small river named Duden flows by their place and supplies.A small river named Duden flows by their place and supplies.
+              </div>
+              <div class="name">
+                Jigme Lodey
+                <div class="job-title">
+                  Drukbit
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </swiper>
+    </div>
+  </div>
+  <div class="contacts" fxLayout="row" fxFlex="100" fxLayoutAlign="center center" id="contact">
+    <div class="contact-form"  fxLayout="column"  fxLayoutAlign="center center" fxFlex.gt-sm="50">
+      <span class="container-header" fxLayoutAlign="center center">Contact </span>
+      <div fxLayout="row" fxHide.lt-sm fxLayoutGap="30px">
+        <div class="info" fxLayout="row" fxLayoutGap="10px">
+         <fa-icon [icon]="mail" fxLayoutAlign="center center"></fa-icon>
+          <span fxLayoutAlign="center center">drukbit@gmail.com</span>
+        </div>
+        <div class="info" fxLayout="row" fxLayoutGap="10px">
+          <fa-icon [icon]="phone" fxLayoutAlign="center center"></fa-icon>
+          <span fxLayoutAlign="center center">drukbit@gmail.com</span>
+        </div>
+        <div class="info" fxLayout="row" fxLayoutGap="10px">
+          <fa-icon [icon]="location" fxLayoutAlign="center center"></fa-icon>
+          <span fxLayoutAlign="center center">drukbit@gmail.com</span>
+        </div>
+      </div>
+      <div class="form" fxLayout="column">
+        <div fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="First Name">
+          </mat-form-field>
+          <mat-form-field appearance="outline" >
+            <input matInput placeholder="Last Name">
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <textarea matInput placeholder="Messages"></textarea>
+        </mat-form-field>
+        <button mat-button>SEND</button>
+      </div>
+    </div>
+  </div>
+  <div class="subscribe" fxLayout="row" fxFlex="100" fxLayoutAlign="center center">
+    <div fxLayout="column" fxFlex.gt-sm="50" fxLayoutAlign="center center">
+      <span class="container-header">Subscribe</span>
+      <span class="container-subheader">Join Our Newsletter</span>
+      <div fxLayout="row" fxLayoutAlign="center center" fxFill fxFlex="100">
+        <mat-form-field appearance="outline" fxFlex.gt-sm="30">
+          <input matInput placeholder="Email">
+        </mat-form-field>
+        <button mat-button>Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer" fxLayout="column" fxFlexAlign="center center" fxFlex="100">
+    <div fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+      <div class="title" fxFlex="100"  fxLayout.lt-sm="column" fxLayout="row" fxLayoutGap="25px"  fxLayoutAlign="center start" >
+        <div fxFlex.gt-sm="30"  fxFlex.sm="25">
+          <span>Our Story</span>
+          <div fxLayout="column">
+            <div class="story">
+              We start as small group known as drukbit. after started we felt we have to do something so we started making yekyel as our first project.
+            </div>
+            <div class="footer-social">
+              <span>Our Social</span>
+              <div class="footer-icon" fxLayout="row" fxLayoutGap="20px">
+                <fa-icon [icon]="insta"></fa-icon>
+                <fa-icon [icon]="facebook"></fa-icon>
+                <fa-icon [icon]="twit"></fa-icon>
+                <fa-icon [icon]="mail"></fa-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex.gt-sm="25" fxFlex.sm="25">
+          <span>Job Applicant</span>
+          <div class="footer-links">
+            <ul>
+              <li><a>Register Now</a></li>
+              <li><a>Search Job</a></li>
+              <li><a>Book Session</a></li>
+              <li><a>Post Your Skills</a></li>
+            </ul>
+          </div>
+        </div>
+        <div fxFlex.gt-sm="15"  fxFlex.sm="25">
+          <span>Company</span>
+            <div class="footer-links">
+              <ul>
+                <li> Register Now</li>
+                <li>Search Job</li>
+                <li>Book Session</li>
+                <li>Post Your Skills</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright" fxFill fxLayoutAlign="center center"  fxFlex="10">
+      Copyright &copy; 2020 All rights reserved by drukbit
+    </div>
+  </div>
+</div>
+
